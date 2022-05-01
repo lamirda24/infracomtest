@@ -10,11 +10,7 @@ const Headers = () => {
           <Link to="/asd" className="navbar-brand">
             Home
           </Link>
-          <Nav className="me-auto">
-            <Link to="/asd" className="nav-link">
-              ASD
-            </Link>
-          </Nav>
+          <Nav className="me-auto"></Nav>
         </Container>
       </Navbar>
     </>

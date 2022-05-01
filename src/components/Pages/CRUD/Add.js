@@ -19,7 +19,18 @@ const Add = () => {
     const id = todoList[todoList.length - 1].id + 1;
     const dataSubmit = { id: id, ...data };
     if (data) {
-      dispatch(addTodos(dataSubmit));
+      axios
+        .post(
+          "http://my-json-server.typicode.com/lamirda24/fakeserver/todos",
+          dataSubmit
+        )
+        .then((res) => {
+          swal("Data berhasil ditambahkan!", "", "success");
+          dispatch(addTodos(dataSubmit));
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     } else {
       swal("Harap isi form terlebih dahulu", "", "warning");
     }

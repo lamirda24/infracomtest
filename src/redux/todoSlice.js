@@ -30,20 +30,19 @@ const todoSlice = createSlice({
         createdAt: currentDate,
       };
       //   console.log(newTodo);
-      const submit = axios
-        .post(
-          "http://my-json-server.typicode.com/lamirda24/fakeserver/todos",
-          newTodo
-        )
-        .then((res) => {
-          swal("Data berhasil ditambahkan!", "", "success");
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-      if (submit) {
-        state.push(newTodo);
-      }
+
+      state.push(newTodo);
+    },
+    markAsDone: (state, action) => {
+      const dataSubmit = {
+        status: 1,
+      };
+
+      const index = state.findIndex((todo) => todo.id === action.payload);
+      state[index].status = 1;
+    },
+    deleteTodos: (state, action) => {
+      return state.filter((todo) => todo.id !== action.payload);
     },
   },
   extraReducers: {
@@ -52,5 +51,5 @@ const todoSlice = createSlice({
     },
   },
 });
-export const { addTodos } = todoSlice.actions;
+export const { addTodos, markAsDone, deleteTodos } = todoSlice.actions;
 export default todoSlice.reducer;
