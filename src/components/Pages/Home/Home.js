@@ -12,7 +12,7 @@ const Home = () => {
 
   useEffect(() => {
     dispatch(getData());
-  }, []);
+  }, [dispatch]);
   return (
     <div className="container">
       <Add />
