@@ -11,7 +11,7 @@ function App() {
       <Headers />
       <Routes>
         <Route path="/" exact element={<Containers />}>
-          <Route path="/" exact element={<Home />} />
+          <Route path="/" element={<Home />} />
         </Route>
       </Routes>
     </BrowserRouter>
