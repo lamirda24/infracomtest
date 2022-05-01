@@ -8,7 +8,7 @@ const currentDate = moment.tz("Asia/Jakarta").format("YYYY-MM-DD HH:mm");
 
 export const getData = createAsyncThunk("getData", async () => {
   const response = await fetch(
-    "http://my-json-server.typicode.com/lamirda24/fakeserver/todos",
+    "https://my-json-server.typicode.com/lamirda24/fakeserver/todos",
     {
       headers: {
         "Access-Control-Allow-Origin": "*",
