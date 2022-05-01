@@ -14,7 +14,7 @@ const Read = ({ data }) => {
     };
     axios
       .patch(
-        `http://my-json-server.typicode.com/lamirda24/fakeserver/todos/${id}`,
+        `https://my-json-server.typicode.com/lamirda24/fakeserver/todos/${id}`,
         dataSubmit,
         {
           headers: {
@@ -35,7 +35,7 @@ const Read = ({ data }) => {
   const deleteTodo = (id) => {
     axios
       .delete(
-        `http://my-json-server.typicode.com/lamirda24/fakeserver/todos/${id}`,
+        `https://my-json-server.typicode.com/lamirda24/fakeserver/todos/${id}`,
         {
           headers: {
             "Access-Control-Allow-Origin": "*",

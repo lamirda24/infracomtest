@@ -21,7 +21,7 @@ const Add = () => {
     if (data) {
       axios
         .post(
-          "http://my-json-server.typicode.com/lamirda24/fakeserver/todos",
+          "https://my-json-server.typicode.com/lamirda24/fakeserver/todos",
           dataSubmit,
           {
             headers: {
@@ -47,7 +47,7 @@ const Add = () => {
         <Card.Header>Add Todo</Card.Header>
         <Card.Body>
           <Form>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Group className="mb-3" controlId="formTitle">
               <Form.Label>Title</Form.Label>
               <Form.Control
                 type="text"
@@ -57,8 +57,8 @@ const Add = () => {
               />
             </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Label>Password</Form.Label>
+            <Form.Group className="mb-3" controlId="formDescription">
+              <Form.Label>Description</Form.Label>
               <Form.Control
                 as="textarea"
                 placeholder="Description"
