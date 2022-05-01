@@ -22,7 +22,12 @@ const Add = () => {
       axios
         .post(
           "http://my-json-server.typicode.com/lamirda24/fakeserver/todos",
-          dataSubmit
+          dataSubmit,
+          {
+            headers: {
+              "Access-Control-Allow-Origin": "*",
+            },
+          }
         )
         .then((res) => {
           swal("Data berhasil ditambahkan!", "", "success");
